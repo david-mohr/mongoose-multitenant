@@ -5,7 +5,7 @@ See readme for examples and info
 @author Jason Raede <jason@torchedm.com>
 */
 
-var collectionDelimiter, dot, mongoose, owl, _;
+var collectionDelimiter, dot, mongoose, clone, _;
 
 mongoose = require('mongoose');
 
@@ -15,7 +15,7 @@ dot = require('dot-component');
 
 _ = require('underscore');
 
-owl = require('owl-deepcopy');
+clone = require('clone');
 
 /*
 Added by @watnotte
@@ -58,7 +58,7 @@ mongoose.mtModel = function(name, schema, collectionName) {
   extendSchemaWithTenantId = function(tenantId, schema) {
     var config, extension, newPath, newSchema, newSubSchema, prop, _ref;
     extension = {};
-    newSchema = owl.deepCopy(schema);
+    newSchema = clone.clonePrototype(schema);
     newSchema.callQueue.forEach(function(k) {
       var args, key, val, _ref;
       args = [];
