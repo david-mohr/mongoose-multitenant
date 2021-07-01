@@ -1,6 +1,6 @@
 {
   "name": "mongoose-multitenant",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Wrapper for Mongoose that allows for easy horizontal multitenancy (collection prefix per tenant)",
   "repository" : {
     "type" : "git",
@@ -28,7 +28,7 @@
   "dependencies": {
     "mongoose-schema-extend": "~0.1.7",
     "dot-component": "~0.1.0",
-    "underscore": "~1.5.2",
+    "underscore": "^1.13.1",
     "clone": "~2.1.1"
   },
   "devDependencies": {
